@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22200568 이은총 5/25 과제</title>
+<style>
+   * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0px;
+      background-color: aliceblue;
+    }
+    header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: grey;
+      padding: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      background-color: lightgray;
+      padding: 10px 15px;
+    }
+    main {
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .card_section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    article {
+      background-color: white;
+      border: 2px solid black;
+      padding: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* 문제 1 정답
+    @media (max-width: 600px) {
+      .card_section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* 문제 2 정답 
+    @media (max-width: 300px) {
+      nav {
+        flex-direction: column; 
+      }
+      .card_section {
+        grid-template-columns: 1fr; 
+      }
+    }
+      */
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Page</h1>
+      <p>Flex, Grid, Media Query Practice</p>
+    </header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+      <a href="#">JS</a>
+    </nav>
+
+    <main>
+      <section class="card_section">
+        <article>
+          <h2>HTML</h2>
+          <p>HTML은 웹 페이지 구조를 만드는 언어입니다.</p>
+        </article>
+        <article>
+          <h2>CSS</h2>
+          <p>CSS는 웹 페이지의 디자인을 꾸미는 언어입니다.</p>
+        </article>
+        <article>
+          <h2>Responsive Web</h2>
+          <p>반응형 웹은 화면 크기에 따라 웹 구조가 바뀝니다.</p>
+        </article>
+      </section>
+    </main>
+    <footer> Frontend Practice Page </footer>
+</body>
+</html>
