@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <style>
+      #commentToggle,
+      #heartToggle {
+        display: none;
+      }
+
+      .heart-label,
+      .comment-label {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .heart-on {
+        display: none;
+      }
+
+      #heartToggle:checked + .heart-label .heart-off {
+        display: none;
+      }
+
+      #heartToggle:checked + .heart-label .heart-on {
+        display: inline;
+      }
+
+      .comments-section {
+        display: none;
+      }
+
+      #commentToggle:checked ~ .comments-section {
+        display: block;
+      }
+
+      .post-content p {
+        margin-bottom: 20px;
+      }
+
+      .post-stat {
+        cursor: pointer;
+      }
+
+      .btn-list-back {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="gnb">
+        <div class="gnb-inner">
+          <a href="index.html" class="gnb-logo">
+            <span class="gnb-logo-text">PET35</span>
+          </a>
+
+          <nav class="gnb-nav">
+            <a href="index.html">홈</a>
+            <a href="community.html" class="active">커뮤니티</a>
+            <a href="mypage.html">마이페이지</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <section class="detail-layout">
+          <input type="checkbox" id="commentToggle" />
+
+          <article class="post-body">
+            <div class="post-breadcrumb">커뮤니티 / 강아지</div>
+
+            <span class="tag">고양이</span>
+
+            <h1 class="post-title">
+              이사 후 적응 못하는 고양이, 어떻게 해야 할까요?
+            </h1>
+
+            <div class="post-author-row">
+              <div class="avatar">냥</div>
+
+              <div class="post-author-info">
+                <div class="author-name">냥집사</div>
+                <div class="author-meta">2026.05.20 · 조회 142</div>
+              </div>
+            </div>
+
+            <div class="post-content">
+              <p>
+                강아지를 키운 지 6개월이 됐는데, 최근 들어 갑자기 밥을 잘 안
+                먹기 시작했어요.
+              </p>
+
+              <p>
+                평소에는 밥을 정말 잘 먹었는데, 3~4일 전부터 그릇 앞에 서서
+                냄새만 맡고 돌아가더라고요. 간식은 먹는 것 같고, 활동량이나
+                기운은 평소와 비슷해 보여서 아픈 건 아닌 것 같기도 한데...
+              </p>
+
+              <p>
+                혹시 비슷한 경험 있으신 분 계신가요? 사료를 바꿔봐야 할지,
+                아니면 병원에 가봐야 할지 판단이 안 서요. 조언 부탁드립니다! 🐾
+              </p>
+            </div>
+
+            <div class="post-action-row">
+              <div class="post-stats">
+                <div class="post-stat">
+                  <input type="checkbox" id="heartToggle" />
+
+                  <label for="heartToggle" class="heart-label">
+                    <span class="heart-off">🤍 34</span>
+                    <span class="heart-on">❤️ 35</span>
+                  </label>
+                </div>
+
+                <label for="commentToggle" class="post-stat comment-label">
+                  💬 댓글 3개 보기
+                </label>
+              </div>
+
+              <a href="community.html" class="btn-list-back">목록으로</a>
+            </div>
+          </article>
+
+          <section class="comments-section">
+            <h2 class="comments-title">댓글 3</h2>
+
+            <div class="comments-divider"></div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar avatar-cat">냥</div>
+
+                <div>
+                  <div class="comment-author-name">냥이집사</div>
+                  <div class="comment-time">2시간 전</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                저희 강아지도 그런 적 있었어요! 사료 브랜드를 바꾸니까 바로 잘
+                먹더라고요. 한번 사료 바꿔보세요 🥺
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar">펫</div>
+
+                <div>
+                  <div class="comment-author-name">펫전문가</div>
+                  <div class="comment-time">5시간 전</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                식욕 부진이 3일 이상 지속되면 병원에 가보시는 걸 추천드려요.
+                간식은 먹더라도 평소와 다른 행동이 계속되면 확인이 필요할 수
+                있어요!
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar avatar-green">콩</div>
+
+                <div>
+                  <div class="comment-author-name">콩이아빠</div>
+                  <div class="comment-time">어제</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                저희는 밥 주는 시간을 일정하게 정했더니 해결됐어요 ㅎㅎ 간식
+                양도 조금 줄여보는 것도 괜찮을 것 같아요.
+              </div>
+            </div>
+
+            <div class="comment-write-label">댓글을 남겨보세요</div>
+
+            <div class="comment-input-row">
+              <input
+                type="text"
+                class="comment-input"
+                placeholder="따뜻한 댓글을 달아보세요 🐾"
+              />
+
+              <button type="button" class="comment-submit">등록</button>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-logo">
+          <span class="gnb-logo-text" style="color: white">PET35</span>
+        </div>
+
+        <p class="footer-desc">반려인을 위한 커뮤니티</p>
+
+        <p class="footer-copy">
+          © 2026 PET35 · TEAM 완조 · All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
