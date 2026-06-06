@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <style>
+      #commentToggle,
+      #heartToggle {
+        display: none;
+      }
+
+      .heart-label,
+      .comment-label {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .heart-on {
+        display: none;
+      }
+
+      #heartToggle:checked + .heart-label .heart-off {
+        display: none;
+      }
+
+      #heartToggle:checked + .heart-label .heart-on {
+        display: inline;
+      }
+
+      .comments-section {
+        display: none;
+      }
+
+      #commentToggle:checked ~ .comments-section {
+        display: block;
+      }
+
+      .post-content p {
+        margin-bottom: 20px;
+      }
+
+      .post-image {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        margin: 24px auto 32px;
+        border-radius: 16px;
+        object-fit: cover;
+        box-shadow: var(--shadow-card);
+      }
+
+      .btn-list-back {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="gnb">
+        <div class="gnb-inner">
+          <a href="index.html" class="gnb-logo">
+            <span class="gnb-logo-text">PET35</span>
+          </a>
+
+          <nav class="gnb-nav">
+            <a href="index.html">홈</a>
+            <a href="community.html" class="active">커뮤니티</a>
+            <a href="mypage.html">마이페이지</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <section class="detail-layout">
+          <input type="checkbox" id="commentToggle" />
+
+          <article class="post-body">
+            <div class="post-breadcrumb">커뮤니티 / 강아지</div>
+
+            <span class="tag">강아지</span>
+
+            <h1 class="post-title">10년을 함께한 코코와의 추억</h1>
+
+            <div class="post-author-row">
+              <div class="avatar">코</div>
+
+              <div class="post-author-info">
+                <div class="author-name">코코랑 나랑</div>
+                <div class="author-meta">2026.05.20 · 조회 142</div>
+              </div>
+            </div>
+
+            <div class="post-content">
+              <p>
+                저희 강아지는 10살 갈색 털을 가지고 있는 토이푸들 코코에요🐩
+              </p>
+
+              <img src="코코사진1.jpg" alt="코코 사진 1" class="post-image" />
+
+              <p>
+                코코는 흔히 생각하는 '파워 애교' 푸들과는 거리가 좀 멀어요.
+                평소에는 무뚝뚝한 표정으로 혼자만의 여유를 즐길 줄 아는 아주
+                시크한 도시 강아지거든요.
+              </p>
+
+              <p>
+                인형을 던져주면 신나서 물어올 거라 생각하셨다면 오산입니다.
+                코코는 절대 가져오지 않습니다.😭 오히려 주인이 인형을 가지러
+                오게 만드는 고도의 심리전을 즐기죠.
+              </p>
+
+              <img src="코코3.jpg" alt="코코 사진 3" class="post-image" />
+
+              <p>
+                가끔은 제가 코코랑 놀아주는 게 아니라, 코코가 저를 훈련시키는
+                기분이 들 때도 있어요. 😂 이렇게 쿨한 코코도 무너지는 순간이
+                있습니다.
+              </p>
+
+              <p>
+                본인이 필요할 때는 세상 어디에도 없는 치명적인 애교를 부리며
+                다가오는데, 그 반전 매력에 매번 속아 넘어갈 수밖에 없답니다.
+              </p>
+
+              <img src="코코2.png" alt="코코 사진 2" class="post-image" />
+
+              <p>
+                우리 코코의 유별난 취향 하나, 바로 노란색입니다! 세상의 모든
+                노란색은 다 자기 것인 줄 아는지, 노란 물건만 보면 눈이
+                휘둥그레지고 꼬리 모터가 돌아가요ㅋㅋ
+              </p>
+
+              <p>
+                어느덧 코코와 함께한 지도 벌써 10년이라는 세월이 흘렀네요.
+                천방지축이던 예전과 달리 조금씩 나이 들어가는 모습이 보일 때면
+                마음 한구석이 찡해지기도 합니다. 무뚝뚝하면 좀 어때요?
+                건강하게만 곁에 있어 준다면 더 바랄 게 없죠.
+              </p>
+
+              <p>
+                코코야, 앞으로도 우리 집 '시크 대장'으로 오래오래 함께하자!
+                사랑해! 🐾
+              </p>
+
+              <img src="코코4.png" alt="코코 사진 4" class="post-image" />
+            </div>
+
+            <div class="post-action-row">
+              <div class="post-stats">
+                <div class="post-stat">
+                  <input
+                    type="checkbox"
+                    id="heartToggle"
+                    class="heart-toggle"
+                  />
+
+                  <label for="heartToggle" class="heart-label">
+                    <span class="heart-off">🤍 56</span>
+                    <span class="heart-on">❤️ 57</span>
+                  </label>
+                </div>
+
+                <label for="commentToggle" class="post-stat comment-label">
+                  💬 댓글 4개 보기
+                </label>
+              </div>
+
+              <a href="community.html" class="btn-list-back">목록으로</a>
+            </div>
+          </article>
+
+          <section class="comments-section">
+            <h2 class="comments-title">댓글 4</h2>
+
+            <div class="comments-divider"></div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar avatar-cat">po</div>
+
+                <div>
+                  <div class="comment-author-name">poodle_lover</div>
+                  <div class="comment-time">45분 전</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                던진 인형 안 가져오는 거 진짜 공감이네욬ㅋㅋㅋ '네가 던졌으니
+                네가 가져와라' 이러는 거 저희 애도 가끔 이래요ㅜㅜ😂😂
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar">시크</div>
+
+                <div>
+                  <div class="comment-author-name">시크댕댕</div>
+                  <div class="comment-time">5시간 전</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                무뚝뚝한 푸들 매력 있죠ㅎ 평소엔 차갑다가 애교 한번 부릴 때 그
+                반전 매력에 녹아내립니다. 직접 보고 싶네요! 넘 귀여워요 💛
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar avatar-green">fo</div>
+
+                <div>
+                  <div class="comment-author-name">forever_friend</div>
+                  <div class="comment-time">어제</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                10년이라니.. 견주분 사랑이 느껴지네요ㅜㅜ 나이 먹어가는 게 눈에
+                보일 때마다 슬픈 그 마음이 너무 공감됩니다. 코코야 건강만 해! 🙏
+                오래오래 함께하자!
+              </div>
+            </div>
+
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="avatar avatar-green">양</div>
+
+                <div>
+                  <div class="comment-author-name">양갱엄마</div>
+                  <div class="comment-time">2일 전</div>
+                </div>
+              </div>
+
+              <div class="comment-text">
+                근데 인형 안 가져오고 버티는 거 보니까 아직 기운이 펄펄한데요?
+                ㅎㅎ 무뚝뚝하다가도 가끔 애교에 견주님 심장이 남아나질 않으실
+                듯.. 코코의 10살 라이프를 응원합니다!!🐾
+              </div>
+            </div>
+
+            <div class="comment-write-label">댓글을 남겨보세요</div>
+
+            <div class="comment-input-row">
+              <input
+                type="text"
+                class="comment-input"
+                placeholder="따뜻한 댓글을 달아보세요 🐾"
+              />
+
+              <button type="button" class="comment-submit">등록</button>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-logo">
+          <span class="gnb-logo-text" style="color: white">PET35</span>
+        </div>
+
+        <p class="footer-desc">반려인을 위한 커뮤니티</p>
+
+        <p class="footer-copy">
+          © 2026 PET35 · TEAM 앞단즈 · All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PET35 글 작성</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <style>
+      .write-radio {
+        display: none;
+      }
+
+      .write-radio:checked + .write-cat-btn {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .bold-toggle {
+        display: none;
+      }
+
+      .editor-toolbar {
+        width: 100%;
+        height: 46px;
+        border: 1px solid var(--border);
+        border-radius: 10px 10px 0 0;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 0 16px;
+      }
+
+      .tool {
+        font-size: 14px;
+        color: var(--secondary);
+        font-weight: 700;
+        cursor: default;
+      }
+
+      .bold-btn {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      #boldToggle:checked ~ .editor-toolbar .bold-btn {
+        background: var(--accent);
+        color: var(--primary);
+        padding: 5px 10px;
+        border-radius: 7px;
+      }
+
+      #boldToggle:checked ~ .write-content-input {
+        font-weight: 800;
+      }
+
+      .write-content-input {
+        border-radius: 0 0 10px 10px;
+        border-top: none;
+      }
+
+      .write-attach input {
+        display: none;
+      }
+
+      .write-attach {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="gnb">
+        <div class="gnb-inner">
+          <a href="index.html" class="gnb-logo">
+            <span class="gnb-logo-text">PET35</span>
+          </a>
+
+          <nav class="gnb-nav">
+            <a href="index.html">홈</a>
+            <a href="community.html" class="active">커뮤니티</a>
+            <a href="mypage.html">마이페이지</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <section class="write-layout">
+          <form action="community.html" method="get" class="write-form">
+            <h1 class="write-form-title">글 작성하기</h1>
+
+            <div class="write-divider"></div>
+
+            <label class="write-section-label">카테고리</label>
+
+            <div class="write-cats">
+              <input
+                type="radio"
+                id="dog"
+                name="category"
+                value="dog"
+                class="write-radio"
+                checked
+              />
+              <label for="dog" class="write-cat-btn">강아지</label>
+
+              <input
+                type="radio"
+                id="cat"
+                name="category"
+                value="cat"
+                class="write-radio"
+              />
+              <label for="cat" class="write-cat-btn">고양이</label>
+
+              <input
+                type="radio"
+                id="hamster"
+                name="category"
+                value="hamster"
+                class="write-radio"
+              />
+              <label for="hamster" class="write-cat-btn">햄스터</label>
+            </div>
+
+            <label class="write-section-label" for="title">제목</label>
+            <input
+              id="title"
+              class="write-title-input"
+              type="text"
+              name="title"
+              placeholder="제목을 입력해주세요"
+            />
+
+            <label class="write-section-label" for="content">내용</label>
+
+            <input type="checkbox" id="boldToggle" class="bold-toggle" />
+
+            <div class="editor-toolbar">
+              <label for="boldToggle" class="tool bold-btn">B</label>
+              <span class="tool">I</span>
+              <span class="tool">U</span>
+              <span class="tool">―</span>
+              <span class="tool">≡</span>
+              <span class="tool">▦</span>
+              <span class="tool">🔗</span>
+              <span class="tool">🖼️</span>
+            </div>
+
+            <textarea
+              id="content"
+              class="write-content-input"
+              name="content"
+              placeholder="반려동물에 대한 이야기를 자유롭게 나눠 보세요 🐾"
+            ></textarea>
+
+            <label class="write-section-label">이미지 첨부</label>
+
+            <label class="write-attach">
+              이미지 첨부 선택 또는 드래그 앤 드롭
+              <input
+                type="file"
+                name="image"
+                accept="image/png, image/jpeg, image/gif"
+              />
+            </label>
+
+            <div class="write-footer-btns">
+              <a href="community.html" class="btn-write-cancel">취소</a>
+
+              <button type="button" class="btn-write-draft">임시 저장</button>
+
+              <button type="submit" class="btn-write-submit">
+                글 등록하기
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-logo">
+          <span class="gnb-logo-text" style="color: white">PET35</span>
+        </div>
+
+        <p class="footer-desc">반려인을 위한 커뮤니티</p>
+
+        <p class="footer-copy">
+          © 2026 PET35 · TEAM 완조 · All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
